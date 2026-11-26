@@ -50,3 +50,15 @@
 ---
 
 © 2024-2026 Soumya Debnath. Business Source License 1.1 (BSL 1.1).
+
+## 🛡️ Architecture & DX Guardrails Engine
+
+This repository includes an automated TypeScript/Node.js validation engine for serverless estates (`src/guardrails.ts`) enforcing:
+- **OIDC Least-Privilege Trust Policies**: Restricts GitHub Actions identity assumptions to explicit repository subjects (`sub` claim), eliminating long-lived credentials and wildcard trust risks.
+- **Serverless Compute Boundaries**: Enforces AWS Graviton (`arm64`) runtimes, strict synchronous invocation thresholds (<= 30s), and standard memory bounds.
+- **Estate Compliance & Security**: Verifies mandatory organizational resource tagging (`Environment`, `CostCenter`) and encryption at rest across serverless storage (S3/SQS/DynamoDB).
+
+### Running Tests
+```bash
+npm test
+```

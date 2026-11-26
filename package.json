@@ -1,0 +1,15 @@
+{
+  "name": "awesome-zero-server-saas",
+  "version": "1.1.0",
+  "description": "Curated zero-server SaaS architectures with automated AWS serverless estate guardrails",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/guardrails.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "typescript": "^5.7.2"
+  },
+  "license": "BSL-1.1"
+}
